@@ -9,5 +9,5 @@ const createCounter = () => {
   heading.innerText = 0;
   heading.id = "counter";
   document.body.appendChild(heading);
-  return button + heading;
+  return {button, heading}
 };
