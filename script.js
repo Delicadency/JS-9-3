@@ -9,5 +9,13 @@ const createCounter = () => {
   heading.innerText = 0;
   heading.id = "counter";
   document.body.appendChild(heading);
-  return {button, heading}
+  return { button, heading };
 };
+const startCounter = createCounter();
+startCounter.button.addEventListener("click", () => {
+  let counterValue = parseInt(startCounter.heading.innerText);
+  setInterval(() => {
+    counterValue++;
+    startCounter.heading.innerText = counterValue;
+  }, 1000);
+});
